@@ -5,12 +5,24 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.parse.Parse;
+import com.parse.ParseObject;
+
 public class loginactivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginactivity);
+
+        // Enable Local Datastore.
+        Parse.enableLocalDatastore(this);
+
+        Parse.initialize(this, "5JJQ74Au3x8kcf5GZySPXDNwVcwalXAH1VJ69unT", "TV7vSHWB0o4bXoZwWvgRNrNxoJtgCLsJtsvFfYrj");
+
+        ParseObject testObject = new ParseObject("TestSuper");
+        testObject.put("foo", "bar");
+        testObject.saveInBackground();
     }
 
     @Override
