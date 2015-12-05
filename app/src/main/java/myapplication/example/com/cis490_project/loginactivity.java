@@ -1,12 +1,20 @@
 package myapplication.example.com.cis490_project;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.parse.Parse;
 import com.parse.ParseObject;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class loginactivity extends AppCompatActivity {
 
@@ -23,6 +31,7 @@ public class loginactivity extends AppCompatActivity {
         ParseObject testObject = new ParseObject("TestSuper");
         testObject.put("foo", "bar");
         testObject.saveInBackground();
+
     }
 
     @Override
