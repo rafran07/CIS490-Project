@@ -18,7 +18,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Password"
         android:id="@+id/tpassword"
         android:layout_above="@+id/btlogin"
         android:layout_centerHorizontal="true" />
@@ -27,22 +26,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Username"
         android:id="@+id/tName"
         android:layout_above="@+id/tpassword"
         android:layout_alignLeft="@+id/tpassword"
-        android:layout_alignStart="@+id/tusername"
-        android:layout_marginBottom="40dp" />
+        android:layout_alignStart="@+id/tpassword" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/iprofile"
-        android:src="@drawable/com_facebook_profile_picture_blank_square"
-        android:layout_above="@+id/tName"
-        android:layout_alignRight="@+id/btlogin"
-        android:layout_alignEnd="@+id/btlogin"
-        android:layout_marginBottom="56dp" />
+        android:src="@drawable/timer"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -52,6 +47,35 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:id="@+id/txtPassword"
+        android:layout_alignBaseline="@+id/tpassword"
+        android:layout_alignBottom="@+id/tpassword"
+        android:layout_alignLeft="@+id/iprofile"
+        android:layout_alignStart="@+id/iprofile" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:id="@+id/txtUsername"
+        android:layout_above="@+id/tpassword"
+        android:layout_alignLeft="@+id/txtPassword"
+        android:layout_alignStart="@+id/txtPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TimesUP"
+        android:id="@+id/txtTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
 

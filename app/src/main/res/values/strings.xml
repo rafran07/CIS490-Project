@@ -8,5 +8,6 @@
     <string name="facebook_app_id">Facebook</string>
     <string name="LogoutBtn">Logoutbtn</string>
     <string name="Welcome">welcome</string>
+    <string name="title_activity_create_timer">CreateTimer</string>
 
 </resources>

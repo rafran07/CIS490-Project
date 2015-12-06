@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="myapplication.example.com.cis490_project" >
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
-
-
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <activity
             android:name=".loginactivity"
             android:label="@string/app_name" >
@@ -22,18 +20,27 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Welcome"
+            android:label="@string/Welcome" >
+        </activity>
+        <activity
             android:name=".timermenu"
             android:label="@string/title_activity_timermenu" >
         </activity>
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".CreateTimer"
+            android:label="@string/title_activity_create_timer" >
+        </activity>
     </application>
-
 
 </manifest>

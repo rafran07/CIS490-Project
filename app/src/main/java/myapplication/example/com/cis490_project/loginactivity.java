@@ -1,5 +1,6 @@
 package myapplication.example.com.cis490_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -58,9 +59,12 @@ public class loginactivity extends AppCompatActivity {
                         if (user != null) {
                             //start next activity
                             //start sinch service
+
+                            final Intent intent = new Intent(getApplicationContext(), Welcome.class);
+                            startActivity(intent);
                         } else {
                         Toast.makeText(getApplicationContext(),
-                                "There was an error logging in.",
+                                "You have entered an incorrect password or an invalid username.",
                                 Toast.LENGTH_LONG).show();
                     }
                 }
@@ -80,6 +84,8 @@ public class loginactivity extends AppCompatActivity {
                         if (e == null) {
                             //start next activity
                             //start sinch service
+                            final Intent intent = new Intent(getApplicationContext(), Welcome.class);
+                            startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(),
                                     "There was an error signing up."
