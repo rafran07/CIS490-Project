@@ -6,4 +6,7 @@
     <string name="title_activity_loginactivity">loginactivity</string>
     <string name="title_activity_timermenu">timermenu</string>
     <string name="facebook_app_id">Facebook</string>
+    <string name="LogoutBtn">Logoutbtn</string>
+    <string name="Welcome">welcome</string>
+
 </resources>

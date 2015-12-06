@@ -9,29 +9,29 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login With Facebook!"
+        android:text="Login"
         android:id="@+id/btlogin"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Email"
-        android:id="@+id/tEmail"
+        android:text="Password"
+        android:id="@+id/tpassword"
         android:layout_above="@+id/btlogin"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Name"
+        android:text="Username"
         android:id="@+id/tName"
-        android:layout_above="@+id/tEmail"
-        android:layout_alignLeft="@+id/tEmail"
-        android:layout_alignStart="@+id/tEmail"
+        android:layout_above="@+id/tpassword"
+        android:layout_alignLeft="@+id/tpassword"
+        android:layout_alignStart="@+id/tusername"
         android:layout_marginBottom="40dp" />
 
     <ImageView
@@ -43,6 +43,15 @@
         android:layout_alignRight="@+id/btlogin"
         android:layout_alignEnd="@+id/btlogin"
         android:layout_marginBottom="56dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:id="@+id/btsignup"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
 
