@@ -11,8 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.parse.LogInCallback;
-import com.parse.Parse;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
@@ -39,13 +37,12 @@ public class loginactivity extends AppCompatActivity {
 
 
         // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
-
-        Parse.initialize(this, "5JJQ74Au3x8kcf5GZySPXDNwVcwalXAH1VJ69unT", "TV7vSHWB0o4bXoZwWvgRNrNxoJtgCLsJtsvFfYrj");
-
-        ParseObject testObject = new ParseObject("Testing");
-        testObject.put("foo", "badr");
-        testObject.saveInBackground();
+        //Parse.enableLocalDatastore(this);
+        //Parse Notes
+        //Parse.initialize(this, "5JJQ74Au3x8kcf5GZySPXDNwVcwalXAH1VJ69unT", "TV7vSHWB0o4bXoZwWvgRNrNxoJtgCLsJtsvFfYrj");
+        //ParseObject testObject = new ParseObject("Testing");
+        //testObject.put("foo", "badr");
+        //testObject.saveInBackground();
 
 
         loginButton.setOnClickListener(new View.OnClickListener() {
