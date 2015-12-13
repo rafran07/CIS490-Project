@@ -44,15 +44,17 @@ public class CreateTimer extends AppCompatActivity {
                 time = Integer.parseInt(timerTimeField.getText().toString());
 
                 int seconds = time;
+                int seconds2 = time*1000;
+                String ConvertSeconds = Integer.toString(seconds2);
                 int hr = (seconds/3600);
                 int rem = (seconds%3600);
                 int mn = rem/60;
                 int sec = rem%60;
-                String hrStr = (hr<10 ? "0" : "")+hr;
-                String mnStr = (mn<10 ? "0" : "")+mn;
-                String secStr = (sec<10 ? "0" : "")+sec;
+                String hrStr = (hr<10 ? "0":"")+hr;
+                String mnStr = (mn<10 ? "0":"")+mn;
+                String secStr = (sec<10 ? "0":"")+sec;
 
-               String trueTime = (hrStr+ " : "+mnStr+ " : "+secStr+"");
+               String trueTime = (hrStr+ ":"+mnStr+":"+secStr+"");
 
                // int truetime = time
                 // timeint = Integer.parseInt(time);
@@ -61,6 +63,7 @@ public class CreateTimer extends AppCompatActivity {
                 ParseObject testObject = new ParseObject("Timers");
                 testObject.put("Name", timerName);
                 testObject.put("Time", trueTime);
+                testObject.put("Seconds", ConvertSeconds);
                 testObject.saveInBackground();
 
 

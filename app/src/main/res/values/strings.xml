@@ -9,5 +9,6 @@
     <string name="LogoutBtn">Logoutbtn</string>
     <string name="Welcome">welcome</string>
     <string name="title_activity_create_timer">CreateTimer</string>
-
+    <string name="title_activity_main">Parse Simple ListView</string>
+    <string name="namelabel">"Name : "</string>
 </resources>

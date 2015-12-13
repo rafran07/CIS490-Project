@@ -1,9 +1,9 @@
 
 package myapplication.example.com.cis490_project;
-import java.util.concurrent.TimeUnit;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -12,23 +12,33 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-import myapplication.example.com.cis490_project.R;
+import java.util.concurrent.TimeUnit;
 
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
 @SuppressLint("NewApi")
 public class MainActivity extends Activity {
     Button btnStart, btnStop;
     TextView textViewTime;
-
+    String Timer;
+    String Name;
+    String Seconds;
+    Integer ConvertSeconds;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent i = getIntent();
         btnStart = (Button)findViewById(R.id.btnStart);
         btnStop = (Button)findViewById(R.id.btnStop);
         textViewTime = (TextView)findViewById(R.id.textViewTime);
-        textViewTime.setText("00:03:00");
-        final CounterClass timer = new CounterClass(180000,1000);
+        Timer = i.getStringExtra("Timer");
+        textViewTime.setText(Timer);
+        Name = i.getStringExtra("Name");
+        Seconds = i.getStringExtra("Seconds");
+        ConvertSeconds = Integer.valueOf(Seconds);
+
+
+        final CounterClass timer = new CounterClass(ConvertSeconds,1000);
         btnStart.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,8 +50,8 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 timer.cancel();
             }
-        });
-    }
+    });
+}
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     @SuppressLint("NewApi")
     public class CounterClass extends CountDownTimer {

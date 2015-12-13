@@ -25,8 +25,12 @@
             android:label="@string/Welcome" >
         </activity>
         <activity
-            android:name=".timermenu"
-            android:label="@string/title_activity_timermenu" >
+        android:name=".timermenu"
+        android:label="@string/title_activity_timermenu" >
+    </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
         </activity>
 
         <meta-data

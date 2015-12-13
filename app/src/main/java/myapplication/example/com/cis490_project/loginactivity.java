@@ -54,8 +54,8 @@ public class loginactivity extends AppCompatActivity {
                 ParseUser.logInInBackground(username, password, new LogInCallback() {
                     public void done(ParseUser user, com.parse.ParseException e) {
                         if (user != null) {
-                            //start next activity
-                            //start sinch service
+
+
 
                             final Intent intent = new Intent(getApplicationContext(), Welcome.class);
                             startActivity(intent);
@@ -79,8 +79,7 @@ public class loginactivity extends AppCompatActivity {
                 user.signUpInBackground(new SignUpCallback() {
                     public void done(com.parse.ParseException e) {
                         if (e == null) {
-                            //start next activity
-                            //start sinch service
+
                             final Intent intent = new Intent(getApplicationContext(), Welcome.class);
                             startActivity(intent);
                         } else {
